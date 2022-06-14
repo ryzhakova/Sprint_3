@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.given;
 public class OrderClient extends ScooterRestClient {
     private static final String ORDER_PATH = "/api/v1/orders/";
 
-    @Step("Создание заказа")
+    @Step("Создание заказа с цветом {order.scooterColor}")
     public ValidatableResponse createOrder(Order order) {
         return given()
                 .spec(getBaseSpec())
