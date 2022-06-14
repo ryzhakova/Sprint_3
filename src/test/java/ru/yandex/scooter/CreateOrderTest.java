@@ -50,11 +50,13 @@ public class CreateOrderTest {
     }
 
     @Test
-    @DisplayName("Создание заказа")
+    @DisplayName("Создание заказa c разными цветами самоката")
     public void orderCreation() {
         ValidatableResponse createResponse = orderClient.createOrder(order);
+
         int statusCode = createResponse.extract().statusCode();
         track = createResponse.extract().path("track");
+
         assertThat("Invalid status code after order creation", statusCode, equalTo(SC_CREATED));
         assertThat("Track number is absent after order creation", track, is(notNullValue()));
     }

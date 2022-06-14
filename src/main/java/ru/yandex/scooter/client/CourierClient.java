@@ -21,7 +21,7 @@ public class CourierClient extends ScooterRestClient {
                 .then();
     }
 
-    @Step("Создание курьера")
+    @Step("Создание курьера логин: {courier.login}, имя: {courier.firstName}")
     public ValidatableResponse create(Courier courier) {
         return given()
                 .spec(getBaseSpec())
@@ -31,7 +31,7 @@ public class CourierClient extends ScooterRestClient {
                 .then();
     }
 
-    @Step("Удаление курьера")
+    @Step("Удаление курьера {courierId}")
     public ValidatableResponse delete(int courierId) {
         return given()
                 .spec(getBaseSpec())

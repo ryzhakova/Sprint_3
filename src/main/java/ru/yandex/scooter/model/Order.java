@@ -4,11 +4,11 @@ import java.util.List;
 
 public class Order {
 
-    private final String firstName = "Илон";
+    private final String firstName = "Женя";
 
-    private final String lastName = "Маск";
+    private final String lastName = "Лукашин";
 
-    private final String address = "Московская, 1";
+    private final String address = "3-я улица строителей 25";
 
     private final int metroStation = 4;
 
@@ -16,9 +16,9 @@ public class Order {
 
     private final int rentTime = 4;
 
-    private final String deliveryDate = "2022-04-01";
+    private final String deliveryDate = "2022-05-25";
 
-    private final String comment = "Как можно быстрее, пожалуйста, на 1-2-3";
+    private final String comment = "Комментаотй";
 
     private List<String> scooterColor;
 

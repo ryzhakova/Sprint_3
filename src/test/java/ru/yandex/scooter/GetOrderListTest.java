@@ -24,8 +24,10 @@ public class GetOrderListTest {
     @DisplayName("Получение списка заказов")
     public void getOrderList() {
         ValidatableResponse orderListResponse = orderClient.getOrderList();
+
         int statusCode = orderListResponse.extract().statusCode();
         ArrayList<String> ordersList = orderListResponse.extract().path("orders");
+
         assertThat("Invalid status code", statusCode, equalTo(SC_OK));
         assertThat("Orders are absent in the list", ordersList, is(notNullValue()));
     }
